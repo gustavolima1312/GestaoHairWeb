@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GestãoHair | Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pagina-sistema">
+
+    <div class="layout-sistema">
+        <aside class="sidebar">
+            <a href="dashboard.html" class="logo-sistema">
+                <span class="logo-icone">GH</span>
+                <span>GestãoHair</span>
+            </a>
+
+            <nav class="menu-lateral" aria-label="Menu principal">
+                <a href="dashboard.html" class="item-menu ativo">Dashboard</a>
+                <a href="clientes.html" class="item-menu">Clientes</a>
+                <a href="produtos.html" class="item-menu">Produtos</a>
+                <a href="agendamentos.html" class="item-menu">Agendamentos</a>
+                <a href="wireframes.html" class="item-menu">Wireframes</a>
+            </nav>
+
+            <button class="botao-sair" id="btnSair" type="button">
+                Sair
+            </button>
+        </aside>
+
+        <main class="conteudo-sistema">
+            <header class="topo-sistema">
+                <div>
+                    <p class="texto-superior">VISÃO GERAL</p>
+                    <h1>Olá, Administrador(a)!</h1>
+                    <p class="subtitulo-pagina">
+                        Acompanhe o resumo do seu salão para hoje.
+                    </p>
+                </div>
+
+                <div class="perfil-usuario">
+                    <span class="avatar-usuario">A</span>
+
+                    <div>
+                        <strong>Administrador</strong>
+                        <span>Gestão do salão</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="cards-resumo" aria-label="Resumo do salão">
+                <article class="card-resumo">
+                    <span class="card-rotulo">Clientes cadastrados</span>
+                    <strong class="card-numero" id="totalClientes">0</strong>
+                    <span class="card-detalhe">Dados carregados do banco</span>
+                </article>
+
+                <article class="card-resumo">
+                    <span class="card-rotulo">Agendamentos hoje</span>
+                    <strong class="card-numero" id="agendamentosHoje">0</strong>
+                    <span class="card-detalhe">Agenda do dia</span>
+                </article>
+
+                <article class="card-resumo">
+                    <span class="card-rotulo">Produtos em estoque</span>
+                    <strong class="card-numero" id="totalProdutos">0</strong>
+                    <span class="card-detalhe alerta-card">
+                        <span id="produtosEstoqueBaixo">0</span> com estoque baixo
+                    </span>
+                </article>
+
+                <article class="card-resumo">
+                    <span class="card-rotulo">Total de agendamentos</span>
+                    <strong class="card-numero" id="totalAgendamentos">0</strong>
+                    <span class="card-detalhe">Agendamentos cadastrados</span>
+                </article>
+            </section>
+
+            <section class="grade-dashboard">
+                <article class="painel">
+                    <div class="cabecalho-painel">
+                        <div>
+                            <p class="texto-superior">AGENDA</p>
+                            <h2>Próximos agendamentos</h2>
+                        </div>
+
+                        <a href="agendamentos.html" class="link-painel">
+                            Ver agenda
+                        </a>
+                    </div>
+
+                    <div class="lista-agendamentos" id="proximosAgendamentos">
+                    </div>
+                </article>
+
+                <article class="painel painel-acoes">
+                    <div class="cabecalho-painel">
+                        <div>
+                            <p class="texto-superior">ATALHOS</p>
+                            <h2>Ações rápidas</h2>
+                        </div>
+                    </div>
+
+                    <div class="acoes-rapidas">
+                        <a href="clientes.html" class="acao-rapida">
+                            <span class="acao-icone">+</span>
+                            <span>Novo cliente</span>
+                        </a>
+
+                        <a href="produtos.html" class="acao-rapida">
+                            <span class="acao-icone">+</span>
+                            <span>Novo produto</span>
+                        </a>
+
+                        <a href="agendamentos.html" class="acao-rapida">
+                            <span class="acao-icone">+</span>
+                            <span>Novo agendamento</span>
+                        </a>
+                    </div>
+                </article>
+            </section>
+
+            <section class="painel estoque-baixo">
+                <div class="cabecalho-painel">
+                    <div>
+                        <p class="texto-superior">ATENÇÃO</p>
+                        <h2>Produtos com estoque baixo</h2>
+                    </div>
+
+                    <a href="produtos.html" class="link-painel">
+                        Gerenciar produtos
+                    </a>
+                </div>
+
+                <div class="lista-estoque" id="listaEstoqueBaixo">
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

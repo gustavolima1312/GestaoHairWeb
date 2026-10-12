@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GestãoHair | Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pagina-login">
+
+    <main class="login-container">
+        <section class="login-apresentacao">
+            <div class="marca">
+                <div class="marca-icone">GH</div>
+                <span>GestãoHair</span>
+            </div>
+
+            <div class="apresentacao-conteudo">
+                <p class="selo">GESTÃO PARA SALÕES</p>
+
+                <h1>Organize seu salão com mais praticidade.</h1>
+
+                <p>
+                    Cadastre clientes, controle produtos e acompanhe seus
+                    agendamentos em uma única plataforma.
+                </p>
+
+                <ul class="lista-beneficios">
+                    <li>Cadastro de clientes</li>
+                    <li>Controle de produtos</li>
+                    <li>Agenda organizada</li>
+                </ul>
+            </div>
+
+            <p class="rodape-apresentacao">© 2026 GestãoHair</p>
+        </section>
+
+        <section class="login-formulario">
+            <div class="formulario-conteudo">
+                <div class="cabecalho-login">
+                    <h2>Bem-vindo(a)</h2>
+                    <p>Entre com seus dados para acessar o sistema.</p>
+                </div>
+
+                <form id="formLogin" novalidate>
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="exemplo@gestaohair.com"
+                            autocomplete="email"
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="senha">Senha</label>
+
+                        <div class="campo-senha">
+                            <input
+                                type="password"
+                                id="senha"
+                                name="senha"
+                                placeholder="Digite sua senha"
+                                autocomplete="current-password"
+                            >
+
+                            <button
+                                type="button"
+                                id="btnMostrarSenha"
+                                aria-label="Mostrar senha"
+                            >
+                                Mostrar
+                            </button>
+                        </div>
+                    </div>
+
+                    <p id="mensagemLogin" class="mensagem" aria-live="polite"></p>
+
+                    <button type="submit" class="botao-principal">
+                        Entrar no sistema
+                    </button>
+                </form>
+
+                <div class="acesso-teste">
+                    <strong>Acesso demonstrativo</strong>
+                    <span>E-mail: admin@gestaohair.com</span>
+                    <span>Senha: 123456</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

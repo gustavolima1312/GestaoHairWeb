@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GestãoHair | Clientes</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pagina-sistema">
+
+    <div class="layout-sistema">
+        <aside class="sidebar">
+            <a href="dashboard.html" class="logo-sistema">
+                <span class="logo-icone">GH</span>
+                <span>GestãoHair</span>
+            </a>
+
+            <nav class="menu-lateral" aria-label="Menu principal">
+                <a href="dashboard.html" class="item-menu">Dashboard</a>
+                <a href="clientes.html" class="item-menu ativo">Clientes</a>
+                <a href="produtos.html" class="item-menu">Produtos</a>
+                <a href="agendamentos.html" class="item-menu">Agendamentos</a>
+                <a href="wireframes.html" class="item-menu">Wireframes</a>
+            </nav>
+
+            <button class="botao-sair" id="btnSair" type="button">
+                Sair
+            </button>
+        </aside>
+
+        <main class="conteudo-sistema">
+            <header class="topo-pagina">
+                <div>
+                    <p class="texto-superior">CADASTROS</p>
+                    <h1>Clientes</h1>
+                    <p class="subtitulo-pagina">
+                        Cadastre e consulte os clientes do seu salão.
+                    </p>
+                </div>
+            </header>
+
+            <section class="painel painel-formulario">
+                <div class="cabecalho-painel">
+                    <div>
+                        <p class="texto-superior">NOVO CADASTRO</p>
+                        <h2>Adicionar cliente</h2>
+                    </div>
+                </div>
+
+                <form id="formCliente" class="formulario-grade" novalidate>
+                    <div class="campo">
+                        <label for="nomeCliente">Nome completo</label>
+                        <input
+                            type="text"
+                            id="nomeCliente"
+                            placeholder="Digite o nome do cliente"
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefoneCliente">Telefone</label>
+                        <input
+                            type="tel"
+                            id="telefoneCliente"
+                            placeholder="(00) 00000-0000"
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="emailCliente">E-mail</label>
+                        <input
+                            type="email"
+                            id="emailCliente"
+                            placeholder="cliente@email.com"
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="dataNascimentoCliente">Data de nascimento</label>
+                        <input
+                            type="date"
+                            id="dataNascimentoCliente"
+                        >
+                    </div>
+
+                    <div class="campo campo-completo">
+                        <label for="observacaoCliente">Observações</label>
+                        <textarea
+                            id="observacaoCliente"
+                            rows="3"
+                            placeholder="Ex.: preferência de horário, alergias ou observações importantes."
+                        ></textarea>
+                    </div>
+
+                    <div class="campo-completo area-formulario">
+                        <p id="mensagemCliente" class="mensagem" aria-live="polite"></p>
+
+                        <button type="submit" class="botao-principal botao-formulario">
+                            Cadastrar cliente
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="painel">
+                <div class="cabecalho-painel">
+                    <div>
+                        <p class="texto-superior">LISTA DE CLIENTES</p>
+                        <h2>Clientes cadastrados</h2>
+                    </div>
+
+                    <span class="contador-registros" id="contadorClientes">
+                        3 clientes
+                    </span>
+                </div>
+
+                <div class="tabela-responsiva">
+                    <table class="tabela-dados">
+                        <thead>
+                            <tr>
+                                <th>Cliente</th>
+                                <th>Telefone</th>
+                                <th>E-mail</th>
+                                <th>Data de nascimento</th>
+                                <th>Observações</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="listaClientes">                            
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

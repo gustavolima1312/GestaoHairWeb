@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GestãoHair | Produtos</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pagina-sistema">
+
+    <div class="layout-sistema">
+        <aside class="sidebar">
+            <a href="dashboard.html" class="logo-sistema">
+                <span class="logo-icone">GH</span>
+                <span>GestãoHair</span>
+            </a>
+
+            <nav class="menu-lateral" aria-label="Menu principal">
+                <a href="dashboard.html" class="item-menu">Dashboard</a>
+                <a href="clientes.html" class="item-menu">Clientes</a>
+                <a href="produtos.html" class="item-menu ativo">Produtos</a>
+                <a href="agendamentos.html" class="item-menu">Agendamentos</a>
+                <a href="wireframes.html" class="item-menu">Wireframes</a>
+            </nav>
+
+            <button class="botao-sair" id="btnSair" type="button">
+                Sair
+            </button>
+        </aside>
+
+        <main class="conteudo-sistema">
+            <header class="topo-pagina">
+                <div>
+                    <p class="texto-superior">ESTOQUE</p>
+                    <h1>Produtos</h1>
+                    <p class="subtitulo-pagina">
+                        Cadastre e acompanhe os produtos utilizados no salão.
+                    </p>
+                </div>
+            </header>
+
+            <section class="painel painel-formulario">
+                <div class="cabecalho-painel">
+                    <div>
+                        <p class="texto-superior">NOVO PRODUTO</p>
+                        <h2>Adicionar produto ao estoque</h2>
+                    </div>
+                </div>
+
+                <form id="formProduto" class="formulario-grade" novalidate>
+                    <div class="campo">
+                        <label for="nomeProduto">Nome do produto</label>
+                        <input
+                            type="text"
+                            id="nomeProduto"
+                            placeholder="Ex.: Shampoo Hidratante 500ml"
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="categoriaProduto">Categoria</label>
+                        <select id="categoriaProduto">
+                            <option value="">Selecione uma categoria</option>
+                            <option value="Cabelos">Cabelos</option>
+                            <option value="Coloração">Coloração</option>
+                            <option value="Unhas">Unhas</option>
+                            <option value="Tratamentos">Tratamentos</option>
+                            <option value="Acessórios">Acessórios</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="precoProduto">Preço unitário (R$)</label>
+                        <input
+                            type="number"
+                            id="precoProduto"
+                            placeholder="0,00"
+                            min="0.01"
+                            step="0.01"
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="quantidadeProduto">Quantidade em estoque</label>
+                        <input
+                            type="number"
+                            id="quantidadeProduto"
+                            placeholder="0"
+                            min="0"
+                            step="1"
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="estoqueMinimoProduto">Estoque mínimo</label>
+                        <input
+                            type="number"
+                            id="estoqueMinimoProduto"
+                            placeholder="Ex.: 5"
+                            min="0"
+                            step="1"
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="fornecedorProduto">Fornecedor</label>
+                        <input
+                            type="text"
+                            id="fornecedorProduto"
+                            placeholder="Ex.: Distribuidora Beauty"
+                        >
+                    </div>
+
+                    <div class="campo-completo area-formulario">
+                        <p id="mensagemProduto" class="mensagem" aria-live="polite"></p>
+
+                        <button type="submit" class="botao-principal botao-formulario">
+                            Cadastrar produto
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="painel">
+                <div class="cabecalho-painel">
+                    <div>
+                        <p class="texto-superior">ESTOQUE ATUAL</p>
+                        <h2>Produtos cadastrados</h2>
+                    </div>
+
+                    <div class="resumo-produtos">
+                        <span class="contador-registros" id="contadorProdutos">
+                            3 produtos
+                        </span>
+
+                        <span class="valor-estoque" id="valorEstoque">
+                            Estoque: R$ 0,00
+                        </span>
+                    </div>
+                </div>
+
+                <div class="tabela-responsiva">
+                    <table class="tabela-dados">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Categoria</th>
+                                <th>Preço</th>
+                                <th>Quantidade</th>
+                                <th>Estoque mínimo</th>
+                                <th>Fornecedor</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="listaProdutos">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
